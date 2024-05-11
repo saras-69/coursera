@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Menu</title>
+<style>
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .menu-item {
+    background-color: #797474;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Add this line */
+  }
+  .menu-item h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    border: 2px solid black;
+    background-color: red;
+    display: inline-block;
+    position: absolute; /* Add this line */
+    top: 0; /* Add this line */
+    right: 0; /* Add this line */
+  }
+  /* Responsive design for different screen sizes */
+  @media (max-width: 600px) {
+    .menu {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>My Responsive Page</h1>
-    </header>
-    
-    <section class="section">
-        <h2>Chicken</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus vestibulum, tempor est in, viverra lorem.</p>
-    </section>
-
-    <section class="section">
-        <h2>Beef</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus vestibulum, tempor est in, viverra lorem.</p>
-    </section>
-
-    <section class="section">
-        <h2>Sushi</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel metus vestibulum, tempor est in, viverra lorem.</p>
-    </section>
+<div class="menu">
+  <div class="menu-item" >
+    <h2  >Chicken</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem adipisci consectetur et sequi dolores. Libero quisquam nulla quia, perferendis dolor est temporibus provident impedit id. Sequi tempora quo ex, minima a tempore neque dolor ratione, optio, ut aspernatur odio maiores harum at. Perspiciatis laborum voluptates, dolorum doloremque repudiandae corrupti dolores!</p>
+  </div>
+  <div class="menu-item">
+    <h2 >Beef</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis dignissimos eligendi atque laudantium quidem fuga quod eum molestiae, et porro, facilis explicabo. Dignissimos, esse id repudiandae sit suscipit doloribus perferendis, labore quo reprehenderit accusantium non sed reiciendis modi impedit incidunt harum numquam ducimus earum debitis ea quod eveniet? Vitae, laborum?</p>
+  </div>
+  <div class="menu-item" >
+    <h2 >Sushi</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam sunt tempore esse laborum ullam? Tempora quis libero recusandae sed impedit ipsum ab velit totam? Laudantium, iste? Aliquid nesciunt perspiciatis consectetur autem accusamus fugit ullam? Dignissimos cumque ad excepturi, quaerat odio, numquam nulla, quisquam veniam sunt error vitae debitis dolor consequuntur.</p>
+  </div>
+</div>
 </body>
 </html>
